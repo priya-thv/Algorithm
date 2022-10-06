@@ -1,0 +1,47 @@
+https://www.hackerrank.com/challenges/time-conversion/problem?isFullScreen=true
+
+#include<iostream>
+#include<iomanip>
+#include<vector>
+using namespace std;
+
+int main(){
+    int sum=0;
+    string t;
+    cin>>t;
+    string h,m,s;
+    
+     h=t[0];
+     h+=t[1];
+     
+     m=t[3];
+     m+=t[4];
+     
+     
+     s=t[6];
+     s+=t[7];
+         int num=stoi(h);
+     
+     
+     if(t[8]=='P'){
+        if(num==12){
+        num=12;
+        h=to_string(num);
+     cout<<h<<":"<<m<<":"<<s;} 
+        
+        else{
+         sum=num+12;
+     h=to_string(sum);
+     cout<<h<<":"<<m<<":"<<s;
+        }
+     }else if(t[8]=='A'&& num==12){
+         
+         num==0;
+         
+     cout<<h<<":"<<m<<":"<<s;
+         
+     }
+     else
+     cout<<h<<":"<<m<<":"<<s;
+     return 0;
+}
